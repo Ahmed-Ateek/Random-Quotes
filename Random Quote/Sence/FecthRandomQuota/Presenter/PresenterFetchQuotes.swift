@@ -59,6 +59,7 @@ class PresenterFetchQuotes {
                     
                 }else {
                     self.quoetsList.append(contentsOf: self.quoetsList)
+                      self.saveData()
                     self.view?.qoutesLoadedFine()}
             }
             self.view?.hideLoading()
@@ -125,7 +126,7 @@ class PresenterFetchQuotes {
     func configureQuotesCell(cell:FetchQoutesCell,index:Int){
         cell.displayAuthor(authorName:savedQuotes[index].value(forKey: "authorName") as! String  )
         cell.displayQoutes(qoutes: savedQuotes[index].value(forKey: "quotes") as! String )
-        if index == (savedQuotes.count) - 1 {
+        if index == (quoetsList.count) - 1 {
             self.nextPage += 1
             checkInternet()
         }
