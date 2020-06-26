@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="vdZ-gk-zTc">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Random Quota-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="FetchQuoteVC" customModule="Random_Quote" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Qfe-cv-sDe">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Qfe-cv-sDe" secondAttribute="trailing" id="F1f-w2-9V2"/>
+                            <constraint firstItem="Qfe-cv-sDe" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="NPX-Su-IOX"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Qfe-cv-sDe" secondAttribute="bottom" id="fLW-Lg-0nL"/>
+                            <constraint firstItem="Qfe-cv-sDe" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="hr9-zy-zV1"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Random Quota" id="tFs-PC-Glf">
+                        <barButtonItem key="backBarButtonItem" title=" " id="Beh-K7-uRl"/>
+                        <barButtonItem key="rightBarButtonItem" title="Favorite" id="mCf-lj-Xjz">
+                            <connections>
+                                <segue destination="cDw-A1-X9A" kind="show" id="KWE-F7-ZPE"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="quotesTable" destination="Qfe-cv-sDe" id="rnR-IT-U13"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1047.8260869565217" y="107.8125"/>
+        </scene>
+        <!--Favorite-->
+        <scene sceneID="uhD-QR-Iaw">
+            <objects>
+                <viewController id="cDw-A1-X9A" customClass="FavoritesVC" customModule="Random_Quote" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ytd-hp-47e">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="YV0-1k-rpJ">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="YV0-1k-rpJ" firstAttribute="bottom" secondItem="NHM-Yr-pKr" secondAttribute="bottom" id="7zQ-Pi-rrK"/>
+                            <constraint firstItem="YV0-1k-rpJ" firstAttribute="top" secondItem="NHM-Yr-pKr" secondAttribute="top" id="9wV-sR-rkK"/>
+                            <constraint firstItem="YV0-1k-rpJ" firstAttribute="leading" secondItem="NHM-Yr-pKr" secondAttribute="leading" id="gzx-qk-dZX"/>
+                            <constraint firstItem="YV0-1k-rpJ" firstAttribute="trailing" secondItem="NHM-Yr-pKr" secondAttribute="trailing" id="q34-uL-jO6"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="NHM-Yr-pKr"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Favorite" id="qQ7-Zk-vyR"/>
+                    <connections>
+                        <outlet property="favoriteTable" destination="YV0-1k-rpJ" id="kps-HP-ej6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DZi-za-wY2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2056" y="101"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="le5-mn-N0z">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="vdZ-gk-zTc" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="E99-B8-hrY">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="20"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="23"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="2nm-T7-liG"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Xcv-ta-S6K" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-484" y="128"/>
+        </scene>
+    </scenes>
+</document>
